@@ -21,7 +21,7 @@ public class BankAccount {
 
     // constructors
     public BankAccount() {
-        accountNumber = nextBankAccountNumberr; // assign value from static variable to instance
+        accountNumber = nextBankAccountNumber; // assign value from static variable to instance
         nextBankAccountNumber++;
         balance = 0.00;
     }
