@@ -10,10 +10,10 @@ package dkit.oop;
  */
 public class BankAccount {
     private double balance;
-    private int accountNumber = lastAssignedNumber;
+    private int accountNumber;
 
     // Class variables are defined using "static" keyword
-    private static int lastAssignedNumber = 1000;  // Bank Account number
+    private static int nextBankAccountNumber = 1000;  // Bank Account number
     // 'static' makes this a class variable, so all objects share this one
     // variable.  (i.e. each object does not have its own instance )
 
@@ -21,14 +21,14 @@ public class BankAccount {
 
     // constructors
     public BankAccount() {
-        accountNumber = lastAssignedNumber; // assign value from static variable to instance
-        lastAssignedNumber++;
+        accountNumber = nextBankAccountNumberr; // assign value from static variable to instance
+        nextBankAccountNumber++;
         balance = 0.00;
     }
 
     public BankAccount(double initialBalance) {
-        accountNumber = lastAssignedNumber;
-        lastAssignedNumber++;
+        accountNumber = nextBankAccountNumber;
+        nextBankAccountNumber++;
         balance = initialBalance;
     }
 
